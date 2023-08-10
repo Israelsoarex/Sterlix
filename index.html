@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sterlix Ponto de coleta</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #043E7D;
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 3rem;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            color: #043E7D;
+        }
+
+        .searchDiv {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .copyDiv {
+            text-align: center;
+        }
+
+        input {
+            padding: 5px;
+            border: 1px solid #043E7D;
+            border-radius: 5px;
+            margin-right: .5rem;
+        }
+
+        button {
+            padding: 5px 10px;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+            padding: .5rem 1rem;
+        }
+        h1{
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Ajuda a faturar</h1>
+        <div class="searchDiv">
+            <input type="text" placeholder="Nome do ponto de coleta" id="inputTedt"><button id="copyText">Copiar</button>
+        </div>
+        <div class="copyDiv">
+            <button id="inicail">01/07/2023</button>
+            <button id="final">31/07/2023</button>
+        </div>
+    </div>
+    <script>
+        const inputText = document.getElementById('inputTedt');
+        const copyTextButton = document.getElementById('copyText');
+        const initialButton = document.getElementById('inicail');
+        const finalButton = document.getElementById('final');
+
+        copyTextButton.addEventListener('click', () => {
+            inputText.select();
+            document.execCommand('copy');
+        });
+
+        initialButton.addEventListener('click', () => {
+            const dateText = '01/07/2023';
+            const dummyInput = document.createElement('input');
+            document.body.appendChild(dummyInput);
+            dummyInput.value = dateText;
+            dummyInput.select();
+            document.execCommand('copy');
+            document.body.removeChild(dummyInput);
+        });
+
+        finalButton.addEventListener('click', () => {
+            const dateText = '31/07/2023';
+            const dummyInput = document.createElement('input');
+            document.body.appendChild(dummyInput);
+            dummyInput.value = dateText;
+            dummyInput.select();
+            document.execCommand('copy');
+            document.body.removeChild(dummyInput);
+        });
+    </script>
+</body>
+</html>
