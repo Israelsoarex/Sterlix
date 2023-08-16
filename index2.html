@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Pendências de coleta</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="layout">
+        <div>
+            <img src="loading.gif" alt="loader">
+            <p>CARREGANDO...</p>
+        </div>
+    </div>
+    <div id="completeScreen">
+        <div>
+            <img src="terra.png" alt="loader">
+            <p>PENDÊNCIA ENVIADA</p>
+        </div>
+    </div>
+    
+    <div id="mainContainer">
+        <form>
+        <div>
+            <label>Codigo do Vision :</label>
+            <input type="number" placeholder="Código" name="Codigo" required>
+        </div>       
+        <div>
+            <label>Ponto De Coleta :</label>
+            <input type="text" placeholder="Nome" name="Ponto" required >
+        </div>
+        <div id="textContainer">
+            <label>Problema :</label>
+            <textarea name="Problema" required ></textarea>
+        </div>
+        <div id="btnDiv"><button type="submit"> Enviar Pendência</button></div>
+    </form>
+   </div>
+   <script src="index.js"></script>
+</body>
+</html>

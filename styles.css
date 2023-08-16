@@ -1,0 +1,99 @@
+*{
+            user-select: none;
+        }
+        body{
+            background: royalblue;
+            color: royalblue;
+            margin: 0;
+        }
+        form div{
+            display: flex;
+            flex-direction: column;
+            margin-bottom: .5rem;
+        }
+        #textContainer textarea{
+            width: 20rem;
+            height: 9rem;
+            border-radius: .5rem;
+            border: 1px solid royalblue;
+            outline: none;
+            padding: .5rem 0 0 .5rem;
+        }
+        #mainContainer{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: #fff;
+            padding: 1rem;
+            border-radius: .5rem;
+        }
+        label{
+            margin: .3rem 0;
+            font-weight: 600;
+        }
+        input{
+            height: 2rem;
+            outline: none;
+            border-radius: .5rem;
+            border: 1px solid royalblue;
+            padding-left: .5rem;
+        }
+        ::placeholder, input, textarea {
+            color: royalblue;
+        }
+        #btnDiv{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 2rem 0 1rem 0;
+        }
+        #btnDiv button{
+            background: royalblue;
+            padding: .5rem;
+            color: #fff;
+            border: none;
+            border-radius: .5rem;
+            font-size: 1rem;
+            font-weight: 600;
+        }
+        #btnDiv button:hover, #btnDiv button:active{
+            border: 1px solid royalblue;
+            color: royalblue;
+            background: #00000000;
+        }
+        #layout, #completeScreen{
+            position: absolute;
+            background: #00000088;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            display: none;
+        }
+        #completeScreen {
+            background: #fff;
+        }
+        #layout div, #completeScreen div{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        #layout div img{
+            width: 5rem;
+        }
+        #completeScreen div img{
+            width: 7rem;
+        }
+        #layout div p, #completeScreen div p{
+            color: #ccc;
+            font-weight: 600;
+            font-size: 1.2rem;
+        }
+        
+        #completeScreen div p{
+            color: green;
+        }
